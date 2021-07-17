@@ -1,0 +1,30 @@
+<div class="container pd">
+    <div class="row">
+        <div class="col-md-12">
+            <h2>Movie Listing @ GV Cinema</h2>
+            <button type="button" class="btn btn-default b1" (click)="goBack()">Back</button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <h3>{{movieData.name}}</h3>
+            <p>({{movieData.mpaaRating.type }} :{{ movieData.mpaaRating.label}})</p>
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col-md-3">
+            <img src="{{movieData.imgPath}}" class="img2">
+        </div>
+        <div class="col-md-9 p1">
+            <h4>Details</h4>
+            <p>Genre: {{movieData.genre}}</p>
+            <p>Language: {{movieData.language}}</p>
+            <p>Duration: {{movieData.duration}}</p>
+            <p>User Rating: {{movieData.userRating}}</p>
+            <h4>Synopsis</h4>
+            <p>{{movieData.description}}</p>
+        </div>
+    </div>
+
+</div>

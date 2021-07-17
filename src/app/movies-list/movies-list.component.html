@@ -1,0 +1,35 @@
+<div class="container cn">
+    <div class="row r1">
+        <div class="col-lg-12">
+            <h2>Movie Listings @ GV Cinema</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4 c1">
+            <input class="form-control" type="text" [(ngModel)]="moviesSearch" (keyup)="search($event)"
+                placeholder="Search movies...">
+        </div>
+        <h3>Popular Movies this Month</h3>
+
+    </div>
+    <div class="row">
+        <div class="col-md-3" *ngFor="let data of movies">
+            <div class="card2">
+                <a href="" routerLink='/view' [queryParams]="{ mid:  data.id}">
+                    <img class="card-img-top size" src="{{data.imgPath}}" alt="Card image"></a>
+                <div class="card-body2">
+                    <h3 class="card-title">
+                        <a class="a2" routerLink='/view' [queryParams]="{ mid:  data.id}">
+                            {{data.name}}</a>
+                    </h3>
+                    <p class="card-text p1">{{data.duration}} min</p>
+                    <p class="card-text p1 p2">User rating: {{data.userRating}}</p>
+                    <!-- <a routerLink='/view' [queryParams]="{ mid:  data.id}" class="btn btn-primary">Click Here</a> -->
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+</div>
